@@ -1,1 +1,6 @@
-# ES-2020-432-06
+Gemma Melines Daviu (1531425)
+Carlos Márquez Martín (1531666)
+Dani Villanueva Blanco (1526616)
+María Rodríguez Teuler (1491177)
+Desirée Rodríguez Sánchez (1493302)
+Pol Carulla Sánchez (1528286)

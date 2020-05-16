@@ -1,3 +1,0 @@
-# testing libraries
-pytest>=3.3.0
-requests==2.23.0

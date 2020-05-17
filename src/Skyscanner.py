@@ -7,5 +7,5 @@ class Skyscanner():
     def __init__(self):
         pass
 
-    def confirm_reserve(self, user: User, flights: Flights) -> bool:
+    def confirm_reserve(self, user: User) -> bool:
         return True

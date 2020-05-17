@@ -1,8 +1,16 @@
-class TestCars:
-    def test_one(self):
-        x = "this"
-        assert "h" in x
+import os
+import sys
+import tempfile
+import unittest
 
-    def test_two(self):
-        x = 3+3
-        assert x == 6
+from unittest.mock import Mock
+from src.Bank import Bank
+
+class TestPagament:
+    #Cuando el usuario ha seleccionado un método de pago, 
+    #el pago sea con el método de pago esperado
+    def test_6(self):
+        x=('VISA' or 'MASTERCARD')
+        assert ('VISA' or 'MASTERCARD') in x
+
+

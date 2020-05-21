@@ -2,6 +2,8 @@ from src.User import User
 from src.PaymentData import PaymentData
 from src.Skyscanner import Skyscanner
 from src.Bank import Bank
+from src.Cars import Cars, Vehiculo
+from src.Hotels import Hotels, Alojamiento
 
 class Viajes:
 
@@ -10,10 +12,11 @@ class Viajes:
         self.payment_data = None
         self.n_pasajeros = len(lista_pasajeros)
         self.lista_pasajeros = lista_pasajeros
+        self.vuelos = vuelos
         self.lista_destinos = [i.destino for i in vuelos]
         self.precio = 50
-        self.vuelos = vuelos
         self.coches = coches
+        #self.listado_coches = [i.cod_car for i in coches]
         self.hoteles = hoteles
         pass
 
@@ -25,7 +28,13 @@ class Viajes:
     pass
     
     def calcular_precio(self):
-        return self.precio * self.n_pasajeros * len(self.lista_destinos)
+        if self.vuelos != []:
+            return self.precio * self.n_pasajeros * len(self.lista_destinos)
+        else:
+            if self.coches != []:
+                return self.precio * self.n_pasajeros * len(self.coches)
+            else:
+                return self.precio * self.n_pasajeros * len(self.hoteles)
     pass
 
 
@@ -47,6 +56,18 @@ class Viajes:
 
             self.lista_destinos = new_d
             self.vuelos = new_v
+    
+    def eliminar_coches(self, coches):
+       if coches in self.coches:
+            index = self.coches.index(coches)
+            new_d = [
+                    self.coches[i] 
+                    for i in range(len(self.coches))
+                    if i != index
+                    ]                                                                                                    
+
+            self.coches = new_d
+
 
     def payment(self, tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta):
         precio_final = self.calcular_precio()

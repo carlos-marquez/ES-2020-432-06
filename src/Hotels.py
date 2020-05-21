@@ -28,3 +28,11 @@ class Hotels:
             [bool]: Return true.
         """        
         return True
+
+class Alojamiento:
+    def init(self):
+        self.lista_alojamiento = []
+
+    def add_alojamiento(self, cod_hotel, nombre_hotel, num_huespedes, num_hab, reserva):
+        aux = Hotels(cod_hotel, nombre_hotel, num_huespedes, num_hab, reserva)
+        self.lista_alojamiento.append(aux)

@@ -1,0 +1,9 @@
+[
+  "tests/cars/Test_Cars_v1.py::TestCars::test_BankObject",
+  "tests/hotels/Test_Hotels_v1.py::TestHotels::test_rm",
+  "tests/mock/test_mock_2.py::TestMock2::test_get_seat_lean_specifications",
+  "tests/mock/test_mock_3.py::TestMock3::test_rm",
+  "tests/mock/test_mock_4.py::TestMock3::test_get_always_true",
+  "tests/samples/test_sample_1.py::TestCars::test_one",
+  "tests/samples/test_sample_1.py::TestCars::test_two"
+]

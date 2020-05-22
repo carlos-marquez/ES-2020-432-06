@@ -71,9 +71,9 @@ class Test_v1:
         aux2 = Vuelos(destino = 'NYC')
         aux_vuelo = [aux1, aux2]
 
-        x = Viajes(vuelos = aux_vuelo)
-        precio = x.precio
-        precio_total = len(aux_vuelo) * precio
+        x = Viajes(vuelos = aux_vuelo, lista_pasajeros = ['p1'])
+        #precio = x.precio
+        precio_total = len(aux_vuelo) * x.precio * len(x.lista_pasajeros)
         
         assert precio_total == x.calcular_precio()
     
@@ -169,7 +169,7 @@ Test_v1.test_3(1)
 Test_v1.test_4(1)
 Test_v1.test_5(1)
 Test_v1.test_6(1)
-#Test_v1.test_7(1)
+Test_v1.test_7(1)
 Test_v1.test_8(1)
 Test_v1.test_9(1)
 Test_v1.test_10(1)

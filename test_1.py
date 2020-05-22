@@ -32,3 +32,11 @@ class test_todos:
         user.comprueba_datos = MagicMock(return_value=True)
 
         assert datos == user.comprueba_datos()
+
+    def test_3(self):
+        user = User('Lola Mento', '11334445X', '08988', '666333999', 'lola@gmail.com')
+        
+        datos=user.comprueba_datos()
+        user.comprueba_datos = MagicMock(return_value=False)
+
+        assert datos == user.comprueba_datos()

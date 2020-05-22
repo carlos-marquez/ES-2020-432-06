@@ -60,6 +60,19 @@ class Viajes:
         return aux.confirm_reserve(self.user)
 
     def comprueba_datos(self, nombre, DNI, Dir_Postal, telf, mail):
+        if (nombre.isdigit()):
+            correcto=False
+        elif (not DNI.isalpha()):
+            correcto=False
+        elif (Dir_Postal.isalpha()):
+            correcto=False
+        elif (telf.isalpha()):
+            correcto=False
+        elif (mail.isalnum()):
+            correcto=False
+        return correcto
+        
+    def datos_completos(self, nombre, DNI, Dir_Postal, telf, mail):
         if (nombre==' '):
             correcto=False
         elif (DNI==' '):

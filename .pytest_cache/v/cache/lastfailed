@@ -14,5 +14,11 @@
   "tests/samples/test_version_1.py::Test_v1::test_8": true,
   "tests/samples/test_version_1.py::Test_v1::test_9": true,
   "tests/samples/test_version_3.py::Test_v3::test_1": true,
-  "tests/samples/test_version_3.py::Test_v3::test_2": true
+  "tests/samples/test_version_3.py::Test_v3::test_2": true,
+  "tests/samples/test_version_3.py::Test_v3::test_3": true,
+  "tests/samples/test_version_3.py::Test_v3::test_4": true,
+  "tests/samples/test_version_3.py::Test_v3::test_5": true,
+  "tests/samples/test_version_3.py::Test_v3::test_6": true,
+  "tests/samples/test_version_3.py::Test_v3::test_7": true,
+  "tests/samples/test_version_3.py::Test_v3::test_8": true
 }

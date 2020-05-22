@@ -1,9 +1,12 @@
 from src.User import User
 from src.PaymentData import PaymentData
 from src.Skyscanner import Skyscanner
+from src.Rentalcars import Rentalcars
+from src.Booking import Booking
 from src.Bank import Bank
 from src.Cars import Cars, Vehiculo
 from src.Hotels import Hotels, Alojamiento
+from src.Flights import Flights, Vuelos
 
 class Viajes:
 
@@ -66,7 +69,18 @@ class Viajes:
                     if i != index
                     ]                                                                                                    
 
-            self.coches = new_d
+            self.coches = new_d 
+    
+    def eliminar_alojamiento(self, hoteles):
+        if hoteles in self.hoteles:
+                index = self.hoteles.index(hoteles)
+                new_d = [
+                        self.hoteles[i] 
+                        for i in range(len(self.hoteles))
+                        if i != index
+                        ]                                                                                                    
+
+                self.hoteles = new_d 
 
 
     def payment(self, tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta):
@@ -75,8 +89,22 @@ class Viajes:
         self.payment_data = PaymentData(tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta, precio_final)
         return x.do_payment(self.user, self.payment_data)
 
-    def anadir_reserva(self):
-        aux = Skyscanner()
-        return aux.confirm_reserve(self.user)                                                                                       
 
-    
+    def anadir_reserva(self, e=0):
+        if e:
+            return False
+        s = Skyscanner()
+        return s.confirm_reserve(self.user, self.vuelos) 
+
+    def anadir_coche(self,  e=0):
+        if e:
+            return False
+        s = Rentalcars()
+        return s.confirm_reserve(self.user, self.coches)  
+
+    def anadir_alojamiento(self,  e=0):
+        if e:
+            return False
+        s = Booking()  
+        return s.confirm_reserve(self.user, self.hoteles)                                                                                   
+

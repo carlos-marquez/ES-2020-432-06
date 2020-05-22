@@ -2,7 +2,7 @@ import requests
 
 class Cars:
 
-    def __init__(self, cod_car, marca, lugar_recogida, dias_reserva):
+    def __init__(self, cod_car = '123', marca = 'BMW', lugar_recogida = 'BCN', dias_reserva = '4'):
         self.cod_car = cod_car
         self.marca = marca
         self.lugar_recogida = lugar_recogida

@@ -6,6 +6,7 @@ import unittest
 from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
 from src.PaymentData import PaymentData
+from src.Skyscanner import Skyscanner
 from unittest.mock import MagicMock
 #from unittest import mock
 #import src.Bank
@@ -20,7 +21,7 @@ class Test_v2:
         aux_vuelo = [aux1, aux2]
 
         x = Viajes(lista_pasajeros = ['p1', 'p2', 'p3'], vuelos = aux_vuelo)
-        y = PaymentData('MASTERCARD', 'Pepito', '4546')
+        y = PaymentData('MASTERCARD', 'Pepito', '4546', '50')
 
         x.payment_V2(y)
 
@@ -31,7 +32,7 @@ class Test_v2:
         aux2 = Vuelos(destino = 'ITA')
         aux_vuelo = [aux1, aux2]
 
-        y = PaymentData('MASTERCARD', 'Pepito', '4546')
+        y = PaymentData('MASTERCARD', 'Pepito', '4546', '50')
         x = Viajes(user = User, lista_pasajeros = ['p1', 'p2', 'p3'], vuelos = aux_vuelo)
         aux = User('Pol', '12345678J', '08390', '123456789', 'user@uab.cat')
 
@@ -48,6 +49,13 @@ class Test_v2:
         aux_vuelo = [aux1, aux2]
 
         x = Viajes(user = User, lista_pasajeros = ['p1', 'p2', 'p3'], vuelos = aux_vuelo)
+        aux = User('Pol', '12345678J', '08390', '123456789', 'user@uab.cat')
+
+        fallo = x.anadir_reserva(1)
+        sky = Skyscanner()
+        sky.confirm_reserve = MagicMock(return_value = False)
+
+        assert sky.confirm_reserve(aux, aux_vuelo) == fallo
 
 
 Test_v2.test1(1)

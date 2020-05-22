@@ -65,12 +65,12 @@ class Viajes:
         
         return x.do_payment(self.user, self.payment_data)
 
-
-    def anadir_reserva(self):
-        aux = Skyscanner()
-        return aux.confirm_reserve(self.user)
-
-                                                                                       
+    def anadir_reserva(self, e=0):
+        if e:
+            return False
+        s = Skyscanner()
+        return s.confirm_reserve(self.user, self.vuelos)
+                                                                      
 
 
     

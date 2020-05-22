@@ -5,12 +5,18 @@ import unittest
 
 from unittest.mock import Mock
 from src.Bank import Bank
+from src.PaymentData import PaymentData
 
-class TestPagament:
-    #Cuando el usuario ha seleccionado un método de pago, 
-    #el pago sea con el método de pago esperado
-    def test_6(self):
+sys.path.append(os.path.realpath('../../src'))
+
+'''class Test_Pagament:
+    Cuando el usuario ha seleccionado un método de pago, 
+    el pago sea con el método de pago esperado
+    def test_1(self):
+        tipus='VISA'
+        pagament=do_payment()
+
         x=('VISA' or 'MASTERCARD')
-        assert ('VISA' or 'MASTERCARD') in x
+        assert ('VISA' or 'MASTERCARD') in x'''
 
 

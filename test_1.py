@@ -2,21 +2,26 @@ import os
 import sys
 import tempfile
 import unittest
+from src.Viajes import Viajes
+from src.Flights import Flights
 
-from unittest.mock import Mock
+from unittest.mock import MagicMock
 from src.Bank import Bank
-from src.PaymentData import PaymentData
+from src.User import User
 
 sys.path.append(os.path.realpath('../../src'))
 
-'''class Test_Pagament:
-    Cuando el usuario ha seleccionado un método de pago, 
-    el pago sea con el método de pago esperado
+class test_todos:
+
+    '''Dado un viaje con múltiples destinos y más de un viajero, cuando los datos de
+    facturación introducidos por el usuario son correctos, se reporta que los datos
+    son correctos'''
+
     def test_1(self):
-        tipus='VISA'
-        pagament=do_payment()
+        user = User('Elena Nito', '11223345X', '08088', '666992332', 'elena@gmail.com')
+        
+        datos=user.comprueba_datos()
+        user.comprueba_datos = MagicMock(return_value=False)
 
-        x=('VISA' or 'MASTERCARD')
-        assert ('VISA' or 'MASTERCARD') in x'''
-
+        assert datos != user.comprueba_datos()
 

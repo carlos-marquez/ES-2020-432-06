@@ -11,11 +11,7 @@ from src.User import User
 
 sys.path.append(os.path.realpath('../../src'))
 
-class test_todos:
-
-    '''Dado un viaje con múltiples destinos y más de un viajero, cuando los datos de
-    facturación introducidos por el usuario son correctos, se reporta que los datos
-    son correctos'''
+class test_v5:
 
     def test_1(self):
         user = User('Elena Nito', '11223345X', '08088', '666992332', 'elena@gmail.com')
@@ -36,9 +32,13 @@ class test_todos:
     def test_3(self):
         user = User('Lola Mento', '11334445X', '08988', '666333999', 'lola@gmail.com')
         
-        datos=user.comprueba_datos()
-        user.comprueba_datos = MagicMock(return_value=False)
+        datos=user.datos_completos()
+        user.datos_completos = MagicMock(return_value=False)
 
-        assert datos == user.comprueba_datos()
+        assert datos == user.datos_completos()
 
     #def test_4(self): FET!
+
+test_v5.test_1(1)
+test_v5.test_2(1)
+test_v5.test_3(1)

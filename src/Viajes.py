@@ -48,14 +48,29 @@ class Viajes:
             self.lista_destinos = new_d
             self.vuelos = new_v
 
-    def payment(self, tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta):
+                
+    def payment_V1(self, tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta):
         precio_final = self.calcular_precio()
         x = Bank()
         self.payment_data = PaymentData(tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta, precio_final)
         return x.do_payment(self.user, self.payment_data)
+    
+    def payment_V2(self, payment, e=0):
+        if e:
+            return False
+        
+        x = Bank()
+
+        self.payment_data = payment
+        
+        return x.do_payment(self.user, self.payment_data)
+
 
     def anadir_reserva(self):
         aux = Skyscanner()
-        return aux.confirm_reserve(self.user)                                                                                       
+        return aux.confirm_reserve(self.user)
+
+                                                                                       
+
 
     

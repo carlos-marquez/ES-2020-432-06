@@ -5,7 +5,6 @@ import unittest
 #import src.Flights
 from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
-
 from unittest.mock import MagicMock
 #from unittest import mock
 #import src.Bank
@@ -138,7 +137,7 @@ class Test_v1:
 
         x = Viajes(user = user, lista_pasajeros = ['p1', 'p2','p3'], vuelos = aux_vuelo)
 
-        datos = x.payment(payment_data[0], payment_data[1], payment_data[2])
+        datos = x.payment_V1(payment_data[0], payment_data[1], payment_data[2])
         x.payment = MagicMock(return_value=True)
 
         assert datos == x.payment()

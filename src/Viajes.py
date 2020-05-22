@@ -99,15 +99,3 @@ class Viajes:
             return hotel.confirm_reserve(self.user)
         else:
             return -1
-=======
-class Viajes:
-
-     def __init__(self, n_pasajeros:int, lista_pasajeros:list, num_destinos:list):
-        self.n_pasajeros = n_pasajeros
-        self.lista_pasajeros = lista_pasajeros
-        self.num_destinos = num_destinos
-        #self.vuelos = vuelos
-        #self.coches = coches
-        #self.hoteles = hoteles
-        pass
->>>>>>> 3969d18b9f8d326e4ed3144530b5e6ad741dad47

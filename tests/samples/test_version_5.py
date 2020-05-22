@@ -66,7 +66,7 @@ class Test_v5:
 
             x = coche.confirmacion_coches(datos[0],datos[1],datos[2],datos[3],datos[4])
 
-        assert x = coche.confirmacion_coches(datos[0],datos[1],datos[2],datos[3],datos[4])
+        assert x == coche.confirmacion_coches(datos[0],datos[1],datos[2],datos[3],datos[4])
     
     def test_6:
 
@@ -150,7 +150,7 @@ class Test_v5:
 
             x = hotel.confirmacion_alojamiento(datos[0],datos[1],datos[2],datos[3],datos[4],datos[5])
            
-        assert x = hotel.confirmacion_alojamiento(datos[0],datos[1],datos[2],datos[3],datos[4],datos[5])
+        assert x == hotel.confirmacion_alojamiento(datos[0],datos[1],datos[2],datos[3],datos[4],datos[5])
 
     def test_9:
         destino1 = Vuelos(destino='BCN')

@@ -40,3 +40,5 @@ class test_todos:
         user.comprueba_datos = MagicMock(return_value=False)
 
         assert datos == user.comprueba_datos()
+
+    #def test_4(self): FET!

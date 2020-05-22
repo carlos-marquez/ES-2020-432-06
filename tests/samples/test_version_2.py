@@ -7,8 +7,7 @@ from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
 from src.PaymentData import PaymentData
 from unittest.mock import MagicMock
-#from unittest import mock
-#import src.Bank
+from src.Skyscanner import Skyscanner
 from src.Bank import Bank
 from src.User import User
 sys.path.append(os.path.realpath('../../src'))
@@ -41,6 +40,19 @@ class Test_v2:
 
         assert i.do_payment(aux, y) == fallo
 
+    def test3(self):
+        aux1 = Vuelos(destino = 'BCN')
+        aux2 = Vuelos(destino = 'ITA')
+        aux_vuelo = [aux1, aux2]
+
+        x = Viajes(user = User, lista_pasajeros = ['p1', 'p2', 'p3'], vuelos = aux_vuelo)
+        aux = User('Pol', '12345678J', '08390', '123456789', 'user@uab.cat')
+
+        fallo = x.anadir_reserva(1)
+        sky = Skyscanner()
+        sky.confirm_reserve = MagicMock(return_value = False)
+
+        assert sky.confirm_reserve(aux, aux_vuelo) == fallo
 
 Test_v2.test1(1)
 Test_v2.test2(1)

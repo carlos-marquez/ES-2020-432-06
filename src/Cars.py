@@ -2,7 +2,10 @@ import requests
 
 class Cars:
 
-    def __init__(self):
+    def __init__(self, cod_car, lugar_recogida, dias_reserva):
+        self.cod_car = cod_car
+        self.lugar_recogida = lugar_recogida
+        self.dias_reserva = dias_reserva
         pass
 
     @staticmethod

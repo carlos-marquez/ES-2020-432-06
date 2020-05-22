@@ -117,7 +117,7 @@ class Test_v3:
     def test_8(self):
         aux1 = Hotels(nombre_hotel = 'Vela')
         aux2 = Hotels()
-        aux_alojamiento = [aux1, aux2]
+        aux_alojamiento = [aux1, aux2]  
 
         x = Viajes(user = User, lista_pasajeros = ['p1', 'p2', 'p3'], hoteles = aux_alojamiento)
         aux = User('Pepito Los Palotes', '12345678P', '08390','678942316', 'pepe@e-champus.uab.cat')

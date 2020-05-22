@@ -5,7 +5,6 @@ import unittest
 #import src.Flights
 from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
-
 from unittest.mock import MagicMock
 #from unittest import mock
 #import src.Bank
@@ -71,9 +70,9 @@ class Test_v1:
         aux2 = Vuelos(destino = 'NYC')
         aux_vuelo = [aux1, aux2]
 
-        x = Viajes(vuelos = aux_vuelo)
-        precio = x.precio
-        precio_total = len(aux_vuelo) * precio
+        x = Viajes(vuelos = aux_vuelo, lista_pasajeros = ['p1'])
+        #precio = x.precio
+        precio_total = len(aux_vuelo) * x.precio * len(x.lista_pasajeros)
         
         assert precio_total == x.calcular_precio()
     
@@ -138,12 +137,12 @@ class Test_v1:
 
         x = Viajes(user = user, lista_pasajeros = ['p1', 'p2','p3'], vuelos = aux_vuelo)
 
-        datos = x.payment(payment_data[0], payment_data[1], payment_data[2])
+        datos = x.payment_V1(payment_data[0], payment_data[1], payment_data[2])
         x.payment = MagicMock(return_value=True)
 
         assert datos == x.payment()
 
-    def test_13(self):
+    def test_13(self):  
         
         aux1 = Vuelos(destino = 'BCN')
         aux2 = Vuelos(destino = 'ITA')
@@ -169,13 +168,10 @@ Test_v1.test_3(1)
 Test_v1.test_4(1)
 Test_v1.test_5(1)
 Test_v1.test_6(1)
-#Test_v1.test_7(1)
+Test_v1.test_7(1)
 Test_v1.test_8(1)
 Test_v1.test_9(1)
 Test_v1.test_10(1)
 Test_v1.test_11(1)
 Test_v1.test_12(1)
 Test_v1.test_13(1)
-
-
-

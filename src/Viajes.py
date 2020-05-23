@@ -78,15 +78,9 @@ class Viajes:
                         for i in range(len(self.hoteles))
                         if i != index
                         ]                                                                                                    
-<<<<<<< HEAD
 
                 self.hoteles = new_d 
 
-=======
-
-                self.hoteles = new_d 
-
->>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 
     def payment_V1(self, tipo_tarjeta, titular_tarjeta, cod_seg_tarjeta):
         precio_final = self.calcular_precio()
@@ -103,8 +97,6 @@ class Viajes:
         self.payment_data = payment
         
         return x.do_payment(self.user, self.payment_data)
-<<<<<<< HEAD
-=======
     
     def payment_V3(self, payment, e=0,reintentos=0, max=0):
         if e:
@@ -119,7 +111,6 @@ class Viajes:
         self.payment_data = payment
         
         return x.do_payment(self.user, self.payment_data)
->>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 
 
     def anadir_reserva(self, e=0):
@@ -127,8 +118,6 @@ class Viajes:
             return False
         s = Skyscanner()
         return s.confirm_reserve(self.user, self.vuelos) 
-<<<<<<< HEAD
-=======
     
     def anadir_reserva_1(self, e=0, reintentos=0, max=0):
         if e:
@@ -140,21 +129,12 @@ class Viajes:
 
         s = Skyscanner()
         return s.confirm_reserve(self.user, self.vuelos) 
->>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 
     def anadir_coche(self,  e=0):
         if e:
             return False
         s = Rentalcars()
         return s.confirm_reserve(self.user, self.coches)  
-<<<<<<< HEAD
-
-    def anadir_alojamiento(self,  e=0):
-        if e:
-            return False
-        s = Booking()  
-        return s.confirm_reserve(self.user, self.hoteles)                                                                                   
-=======
 
     def anadir_alojamiento(self,  e=0):
         if e:
@@ -181,5 +161,4 @@ class Viajes:
         else:
             return -1 
 
->>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 

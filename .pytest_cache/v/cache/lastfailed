@@ -1,4 +1,21 @@
 {
   "tests/Viajes/Test_Viajes_v1.py": true,
-  "tests/samples/test_version_4.py": true
+  "tests/cars/Test_Cars_v1.py::TestCars::test_BankObject": true,
+  "tests/hotels/Test_Hotels_v1.py::TestHotels::test_rm": true,
+  "tests/mock/test_mock_2.py": true,
+  "tests/mock/test_mock_3.py": true,
+  "tests/mock/test_mock_4.py": true,
+  "tests/samples/test_version_1.py": true,
+  "tests/samples/test_version_2.py": true,
+  "tests/samples/test_version_3.py": true,
+  "tests/samples/test_version_4.py": true,
+  "tests/samples/test_version_5.py::Test_v5::test_1": true,
+  "tests/samples/test_version_5.py::Test_v5::test_2": true,
+  "tests/samples/test_version_5.py::Test_v5::test_3": true,
+  "tests/samples/test_version_5.py::Test_v5::test_4": true,
+  "tests/samples/test_version_5.py::Test_v5::test_5": true,
+  "tests/samples/test_version_5.py::Test_v5::test_6": true,
+  "tests/samples/test_version_5.py::Test_v5::test_7": true,
+  "tests/samples/test_version_5.py::Test_v5::test_8": true,
+  "tests/samples/test_version_5.py::Test_v5::test_9": true
 }

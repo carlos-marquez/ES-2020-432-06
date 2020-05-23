@@ -118,13 +118,25 @@ class Viajes:
             return False
         s = Skyscanner()
         return s.confirm_reserve(self.user, self.vuelos) 
+        
+    def anadir_reserva_1(self, e=0, reintentos=0, max=0):
+        if e:
+            return False
+        if reintentos:
+            return False 
+        if max >= 3:
+            exit(0)
+
+        s = Skyscanner()
+        return s.confirm_reserve(self.user, self.vuelos) 
+    
+
 
     def anadir_coche(self,  e=0):
         if e:
             return False
         s = Rentalcars()
         return s.confirm_reserve(self.user, self.coches)  
-
 
 
     

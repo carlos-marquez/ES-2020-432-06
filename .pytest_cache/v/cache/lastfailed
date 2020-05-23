@@ -13,6 +13,9 @@
   "tests/samples/test_version_1.py::Test_v1::test_7": true,
   "tests/samples/test_version_1.py::Test_v1::test_8": true,
   "tests/samples/test_version_1.py::Test_v1::test_9": true,
+  "tests/samples/test_version_2.py::Test_v2::test1": true,
+  "tests/samples/test_version_2.py::Test_v2::test2": true,
+  "tests/samples/test_version_2.py::Test_v2::test3": true,
   "tests/samples/test_version_3.py::Test_v3::test_1": true,
   "tests/samples/test_version_3.py::Test_v3::test_2": true,
   "tests/samples/test_version_3.py::Test_v3::test_3": true,
@@ -20,5 +23,15 @@
   "tests/samples/test_version_3.py::Test_v3::test_5": true,
   "tests/samples/test_version_3.py::Test_v3::test_6": true,
   "tests/samples/test_version_3.py::Test_v3::test_7": true,
-  "tests/samples/test_version_3.py::Test_v3::test_8": true
+  "tests/samples/test_version_3.py::Test_v3::test_8": true,
+  "tests/samples/test_version_4.py": true,
+  "tests/samples/test_version_5.py::Test_v5::test_1": true,
+  "tests/samples/test_version_5.py::Test_v5::test_2": true,
+  "tests/samples/test_version_5.py::Test_v5::test_3": true,
+  "tests/samples/test_version_5.py::Test_v5::test_4": true,
+  "tests/samples/test_version_5.py::Test_v5::test_5": true,
+  "tests/samples/test_version_5.py::Test_v5::test_6": true,
+  "tests/samples/test_version_5.py::Test_v5::test_7": true,
+  "tests/samples/test_version_5.py::Test_v5::test_8": true,
+  "tests/samples/test_version_5.py::Test_v5::test_9": true
 }

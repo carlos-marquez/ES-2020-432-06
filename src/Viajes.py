@@ -11,7 +11,7 @@ from src.Flights import Flights, Vuelos
 class Viajes:
 
     def __init__(self, user: User = None, lista_pasajeros = ['p1','p2','p3','p4'], vuelos = [], coches = [], hoteles = []):
-        self.user = user
+        self.user = user 
         self.payment_data = None
         self.n_pasajeros = len(lista_pasajeros)
         self.lista_pasajeros = lista_pasajeros
@@ -97,11 +97,36 @@ class Viajes:
         self.payment_data = payment
         
         return x.do_payment(self.user, self.payment_data)
+    
+    def payment_V3(self, payment, e=0,reintentos=0, max=0):
+        if e:
+            return False
+        if reintentos:
+            return False 
+        if max >= 3:
+            exit(0)
+        
+        x = Bank()
+
+        self.payment_data = payment
+        
+        return x.do_payment(self.user, self.payment_data)
 
 
     def anadir_reserva(self, e=0):
         if e:
             return False
+        s = Skyscanner()
+        return s.confirm_reserve(self.user, self.vuelos) 
+    
+    def anadir_reserva_1(self, e=0, reintentos=0, max=0):
+        if e:
+            return False
+        if reintentos: 
+            return False 
+        if max >= 3:
+            exit(0)
+
         s = Skyscanner()
         return s.confirm_reserve(self.user, self.vuelos) 
 
@@ -116,4 +141,24 @@ class Viajes:
             return False
         s = Booking()  
         return s.confirm_reserve(self.user, self.hoteles)                                                                                   
+
+    def confirmacion_coches(self,n_pasajeros,cod_car,marca,lugar_recogida,dias_reserva):
+        coche = Rentalcars()
+        aux = Cars(cod_car,marca,lugar_recogida,dias_reserva)
+        comp = aux.comprueba(cod_car,marca,lugar_recogida,dias_reserva) 
+        if comp == 1 and n_pasajeros <= 4:
+            return coche.confirm_reserve(self.user, self.coches)
+        else: 
+            return -1
+    
+    def confirmacion_alojamiento(self,cod_hotel,nombre_hotel,num_huespedes,num_hab,reserva):
+        hotel = Booking()
+        aux = Hotels(cod_hotel,nombre_hotel,num_huespedes,num_hab,reserva)
+        comp = aux.comprueba_hoteles(cod_hotel,nombre_hotel,num_huespedes,num_hab,reserva)
+        cap = num_huespedes/num_hab
+        if comp == 1 and cap <= 3:
+            return hotel.confirm_reserve(self.user, self.hoteles)
+        else:
+            return -1 
+
 

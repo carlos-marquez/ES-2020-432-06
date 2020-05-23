@@ -57,7 +57,7 @@ class Test_v3:
         assert precio_total == x.calcular_precio()
 
     def test_4(self):
-        aux1 = Hotels(nombre_hotel = 'Vela')
+        aux1 = Hotels(nombre_hotel = 'Vela') 
         aux2 = Hotels()
         aux_alojamiento = [aux1, aux2]
         n_viajeros = 3
@@ -114,7 +114,7 @@ class Test_v3:
 
         assert datos == x.anadir_alojamiento()
 
-    def test_8(self):
+    def test_8(self): 
         aux1 = Hotels(nombre_hotel = 'Vela')
         aux2 = Hotels()
         aux_alojamiento = [aux1, aux2]  
@@ -122,7 +122,7 @@ class Test_v3:
         x = Viajes(user = User, lista_pasajeros = ['p1', 'p2', 'p3'], hoteles = aux_alojamiento)
         aux = User('Pepito Los Palotes', '12345678P', '08390','678942316', 'pepe@e-champus.uab.cat')
 
-        fallo = x.anadir_alojamiento(1)
+        fallo = x.anadir_alojamiento(1) 
         book = Booking()
         book.confirm_reserve = MagicMock(return_value = False)
 
@@ -131,7 +131,7 @@ class Test_v3:
         
  
 Test_v3.test_1(1)
-Test_v3.test_2(1)
+Test_v3.test_2(1) 
 Test_v3.test_3(1)
 Test_v3.test_4(1)
 Test_v3.test_5(1)

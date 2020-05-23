@@ -29,5 +29,14 @@
   "tests/samples/test_version_3.py::Test_v3::test_5",
   "tests/samples/test_version_3.py::Test_v3::test_6",
   "tests/samples/test_version_3.py::Test_v3::test_7",
-  "tests/samples/test_version_3.py::Test_v3::test_8"
+  "tests/samples/test_version_3.py::Test_v3::test_8",
+  "tests/samples/test_version_5.py::Test_v5::test_1",
+  "tests/samples/test_version_5.py::Test_v5::test_2",
+  "tests/samples/test_version_5.py::Test_v5::test_3",
+  "tests/samples/test_version_5.py::Test_v5::test_4",
+  "tests/samples/test_version_5.py::Test_v5::test_5",
+  "tests/samples/test_version_5.py::Test_v5::test_6",
+  "tests/samples/test_version_5.py::Test_v5::test_7",
+  "tests/samples/test_version_5.py::Test_v5::test_8",
+  "tests/samples/test_version_5.py::Test_v5::test_9"
 ]

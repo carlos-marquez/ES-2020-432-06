@@ -1,13 +1,13 @@
 import os
 import sys 
 import unittest
-#import src.Viajes
+#import src.Viajes 
 #import src.Flights
 from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
 from src.PaymentData import PaymentData
 from src.Skyscanner import Skyscanner
-from unittest.mock import MagicMock
+from unittest.mock import MagicMock 
 #from unittest import mock
 #import src.Bank
 from src.Bank import Bank
@@ -40,7 +40,7 @@ class Test_v2:
         Bank.do_payment = MagicMock(return_value = False)
         i = Bank()
 
-        assert i.do_payment(aux, y) == fallo
+        assert i.do_payment(aux, y) == fallo 
         
 
     def test3(self):
@@ -58,6 +58,6 @@ class Test_v2:
         assert sky.confirm_reserve(aux, aux_vuelo) == fallo
 
 
-Test_v2.test1(1)
-Test_v2.test2(1)
+Test_v2.test1(1)  
+Test_v2.test2(1) 
 Test_v2.test3(1)

@@ -28,6 +28,19 @@ class Hotels:
             [bool]: Return true.
         """        
         return True
+    def comprueba_hoteles(self,cod_hotel,nombre_hotel,num_huespedes,num_hab,reserva):
+        val_boleano = 1
+        if cod_hotel == '':
+            val_boleano = 0
+        if nombre_hotel == '':
+            val_boleano = 0
+        if num_huespedes == '' and num_huespedes <= 0:
+            val_boleano = 0
+        if num_hab == '' and num_hab <= 0:
+            val_boleano = 0
+        if reserva == '' and reserva <= 0:
+            val_boleano = 0
+        return val_boleano
 
 class Alojamiento:
     def init(self):

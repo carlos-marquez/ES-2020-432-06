@@ -57,7 +57,11 @@ class Test_v3:
         assert precio_total == x.calcular_precio()
 
     def test_4(self):
+<<<<<<< HEAD
         aux1 = Hotels(nombre_hotel = 'Vela')
+=======
+        aux1 = Hotels(nombre_hotel = 'Vela') 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
         aux2 = Hotels()
         aux_alojamiento = [aux1, aux2]
         n_viajeros = 3
@@ -114,15 +118,26 @@ class Test_v3:
 
         assert datos == x.anadir_alojamiento()
 
+<<<<<<< HEAD
     def test_8(self):
         aux1 = Hotels(nombre_hotel = 'Vela')
         aux2 = Hotels()
         aux_alojamiento = [aux1, aux2]
+=======
+    def test_8(self): 
+        aux1 = Hotels(nombre_hotel = 'Vela')
+        aux2 = Hotels()
+        aux_alojamiento = [aux1, aux2]  
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 
         x = Viajes(user = User, lista_pasajeros = ['p1', 'p2', 'p3'], hoteles = aux_alojamiento)
         aux = User('Pepito Los Palotes', '12345678P', '08390','678942316', 'pepe@e-champus.uab.cat')
 
+<<<<<<< HEAD
         fallo = x.anadir_alojamiento(1)
+=======
+        fallo = x.anadir_alojamiento(1) 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
         book = Booking()
         book.confirm_reserve = MagicMock(return_value = False)
 
@@ -131,7 +146,11 @@ class Test_v3:
         
  
 Test_v3.test_1(1)
+<<<<<<< HEAD
 Test_v3.test_2(1)
+=======
+Test_v3.test_2(1) 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 Test_v3.test_3(1)
 Test_v3.test_4(1)
 Test_v3.test_5(1)

@@ -1,20 +1,32 @@
 import os
 import sys 
 import unittest
+<<<<<<< HEAD
 #import src.Viajes
+=======
+#import src.Viajes 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 #import src.Flights
 from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
 from src.PaymentData import PaymentData
 from src.Skyscanner import Skyscanner
+<<<<<<< HEAD
 from unittest.mock import MagicMock
+=======
+from unittest.mock import MagicMock 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 #from unittest import mock
 #import src.Bank
 from src.Bank import Bank
 from src.User import User
 sys.path.append(os.path.realpath('../../src'))
 
+<<<<<<< HEAD
 class Test_v2:
+=======
+class Test_v2:  
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
     def test1(self):
         aux1 = Vuelos(destino = 'BCN')
         aux2 = Vuelos(destino = 'ITA')
@@ -40,7 +52,11 @@ class Test_v2:
         Bank.do_payment = MagicMock(return_value = False)
         i = Bank()
 
+<<<<<<< HEAD
         assert i.do_payment(aux, y) == fallo
+=======
+        assert i.do_payment(aux, y) == fallo 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
         
 
     def test3(self):
@@ -58,6 +74,11 @@ class Test_v2:
         assert sky.confirm_reserve(aux, aux_vuelo) == fallo
 
 
+<<<<<<< HEAD
 Test_v2.test1(1)
 Test_v2.test2(1)
+=======
+Test_v2.test1(1)  
+Test_v2.test2(1) 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 Test_v2.test3(1)

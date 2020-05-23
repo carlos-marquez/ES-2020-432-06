@@ -6,7 +6,7 @@ import unittest
 from src.Viajes import Viajes
 from src.Flights import Flights, Vuelos
 from unittest.mock import MagicMock
-#from unittest import mock
+#from unittest import mock 
 #import src.Bank
 from src.Bank import Bank
 from src.User import User
@@ -103,7 +103,7 @@ class Test_v1:
     
     def test_10(self):
         
-        aux1 = Vuelos(destino = 'BCN')
+        aux1 = Vuelos(destino = 'BCN') 
         aux2 = Vuelos(destino = 'ITA')
         aux_vuelo = [aux1, aux2]
 
@@ -142,10 +142,10 @@ class Test_v1:
 
         assert datos == x.payment()
 
-    def test_13(self):
+    def test_13(self):  
         
         aux1 = Vuelos(destino = 'BCN')
-        aux2 = Vuelos(destino = 'ITA')
+        aux2 = Vuelos(destino = 'ITA') 
         aux_vuelo = [aux1, aux2]
 
         user = User('Pepito Los Palotes', '12345678P', '08390','678942316', 'pepe@e-champus.uab.cat')
@@ -164,17 +164,18 @@ class Test_v1:
  
 Test_v1.test_1(1)
 Test_v1.test_2(1)
-Test_v1.test_3(1)
-Test_v1.test_4(1)
+Test_v1.test_3(1) 
+Test_v1.test_4(1) 
 Test_v1.test_5(1)
 Test_v1.test_6(1)
 Test_v1.test_7(1)
+<<<<<<< HEAD
 Test_v1.test_8(1)
+=======
+Test_v1.test_8(1) 
+>>>>>>> 22c15ac44668516671e5b566da9509be93e5008e
 Test_v1.test_9(1)
 Test_v1.test_10(1)
 Test_v1.test_11(1)
 Test_v1.test_12(1)
 Test_v1.test_13(1)
-
-
-

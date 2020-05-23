@@ -56,6 +56,9 @@ class Viajes:
 
     def anadir_reserva(self):
         aux = Skyscanner()
-        return aux.confirm_reserve(self.user)                                                                                       
+        return aux.confirm_reserve(self.user)    
+
+    
+
 
     

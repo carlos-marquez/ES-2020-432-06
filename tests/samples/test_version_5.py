@@ -229,8 +229,8 @@ class Test_v5:
 
 Test_v5.test_1(1)
 Test_v5.test_2(1)
-Test_v5.test_3(1) 
-Test_v5.test_4(1)
+Test_v5.test_3(1)  
+Test_v5.test_4(1) 
 Test_v5.test_5(1)
 Test_v5.test_6(1)
 Test_v5.test_7(1)

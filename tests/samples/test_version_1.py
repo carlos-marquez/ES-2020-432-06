@@ -97,10 +97,10 @@ class Test_v1:
         aux_vuelo = [aux1, aux2]
 
         x = Viajes(lista_pasajeros = ['p1', 'p2','p3'], vuelos = aux_vuelo)       
-        x.eliminar_destino('BCN')
+        x.eliminar_destino('BCN') 
 
         assert ['NYC'] == x.lista_destinos
-    
+     
     def test_10(self):
         
         aux1 = Vuelos(destino = 'BCN') 
@@ -140,7 +140,7 @@ class Test_v1:
         datos = x.payment_V1(payment_data[0], payment_data[1], payment_data[2])
         x.payment = MagicMock(return_value=True)
 
-        assert datos == x.payment()
+        assert datos == x.payment() 
 
     def test_13(self):  
         

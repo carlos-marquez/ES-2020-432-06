@@ -143,8 +143,8 @@ class Test_v4:
 
 
 Test_v4.test_1(1)
-Test_v4.test_2(1)
+Test_v4.test_2(1) 
 Test_v4.test_3(1)
 Test_v4.test_4(1)
-Test_v4.test_5(1)
+Test_v4.test_5(1) 
 Test_v4.test_6(1)

@@ -109,7 +109,7 @@ class Test_v3:
 
         x = Viajes(user = user, lista_pasajeros = ['p1', 'p2','p3'], hoteles = aux_alojamiento)
 
-        datos = x.anadir_alojamiento()
+        datos = x.anadir_alojamiento() 
         x.anadir_alojamiento = MagicMock(return_value=True)
 
         assert datos == x.anadir_alojamiento()
@@ -131,7 +131,7 @@ class Test_v3:
         
  
 Test_v3.test_1(1)
-Test_v3.test_2(1) 
+Test_v3.test_2(1)  
 Test_v3.test_3(1)
 Test_v3.test_4(1)
 Test_v3.test_5(1)

@@ -44,7 +44,7 @@ class Test_v2:
         
 
     def test3(self):
-        aux1 = Vuelos(destino = 'BCN')
+        aux1 = Vuelos(destino = 'BCN') 
         aux2 = Vuelos(destino = 'ITA')
         aux_vuelo = [aux1, aux2]
 
@@ -58,6 +58,6 @@ class Test_v2:
         assert sky.confirm_reserve(aux, aux_vuelo) == fallo
 
 
-Test_v2.test1(1)  
+Test_v2.test1(1)   
 Test_v2.test2(1) 
 Test_v2.test3(1)
